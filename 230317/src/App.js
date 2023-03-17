@@ -24,7 +24,7 @@ function App() {
     <div className='App'>
       {console.log('render')}
       <h2>{count}</h2>
-      <button onClick={increaseNumber}>더하기 +1</button>
+      <button onClick={() => { setCount(count + 1) }}>더하기 1</button>
       <Modal></Modal>
       <Routes>
         {/* Route 안에 속성값이 두 개가 들어간다 path / element 
