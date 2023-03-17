@@ -6,10 +6,17 @@ import About from './Router/About'
 import Products from './Router/Products'
 import ProductDetail from './Router/ProductDetail'
 import Modal from './Modal';
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [count, setCount] = useState(0)
+  useEffect(() => {
+    console.log('useEffect1')
+  })
+
   return (
     <div className='App'>
+      {console.log('render')}
       <Modal></Modal>
       <Routes>
         {/* Route 안에 속성값이 두 개가 들어간다 path / element 
