@@ -9,7 +9,13 @@ import Modal from './Modal';
 import { useState, useEffect } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(1)
+  // const increaseNumber = () => {
+  //   setCount(count + 1);
+  // };
+
+  // useEffect 함수가 매개변수 두 개를 받는다
+
   useEffect(() => {
     console.log('useEffect1')
   })
@@ -17,6 +23,8 @@ function App() {
   return (
     <div className='App'>
       {console.log('render')}
+      <h2>{count}</h2>
+      <button onClick={increaseNumber}>더하기 +1</button>
       <Modal></Modal>
       <Routes>
         {/* Route 안에 속성값이 두 개가 들어간다 path / element 
