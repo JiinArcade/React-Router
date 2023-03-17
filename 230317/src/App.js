@@ -5,7 +5,7 @@ import Home from './Router/Home'
 import About from './Router/About'
 import Products from './Router/Products'
 import ProductDetail from './Router/ProductDetail'
-import Modal from './Router/Modal';
+import Modal from './Modal';
 
 function App() {
   return (

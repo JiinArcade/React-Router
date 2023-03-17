@@ -1,0 +1,9 @@
+.modal {
+  width: 500px;
+  height: 200px;
+  line-height: 200px;
+  color: #fff;
+  background-color: palevioletred;
+  border-radius: 5px;
+  text-align: center;
+}
