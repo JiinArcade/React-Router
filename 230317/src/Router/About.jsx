@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 const About = () => {
   const navigate = useNavigate('/')
@@ -12,9 +13,6 @@ const About = () => {
   const goHome = () => {
     navigate('/')
   }
-  const goMember = () => {
-    navigate('/')
-  }
   return (
     <div>
       <h1>About Page</h1>
@@ -22,9 +20,10 @@ const About = () => {
         <button>Home으로 이동</button>
       </Link> */}
       <Link to='/about/member'>
-        <button onClick={() => { navigate('/about/member') }}>멤버로 이동</button>
+        <button>멤버로 이동</button>
       </Link>
-      <Outlet></Outlet>
+      <button onClick={() => { navigate('/about/location') }}>로케이션으로 이동</button>
+      <Outlet />
       <button onClick={goHome}>Home으로 이동</button>
     </div>
   )

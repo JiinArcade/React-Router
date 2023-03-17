@@ -5,7 +5,6 @@ import Home from './Router/Home'
 import About from './Router/About'
 import Products from './Router/Products'
 import ProductDetail from './Router/ProductDetail'
-import Member from './Router/Member';
 
 function App() {
   return (
@@ -17,8 +16,17 @@ function App() {
             / : 기본 경로
         */}
         <Route path='/' element={<Home />} />
+
+        {/* nested Routes */}
+        {/* Outlet */}
+        <Route path='/about' element={<About />}>
+          <Route path='member' element={<h1>멤버~~</h1>} />
+          <Route path='location' element={<h1>로케이션~~!</h1>} />
+        </Route>
+
         <Route path='/about' element={<About />} />
-        <Route path='/member' element={<Member />} />
+        <Route path='/about/member' element={<h1>멤버~~</h1>} />
+        <Route path='/about/location' element={<h1>로케이션~~!</h1>} />
 
         <Route path='/products' element={<Products />} />
         <Route path='/products/:id' element={<ProductDetail />} />
